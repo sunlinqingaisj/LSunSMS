@@ -1,24 +1,89 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-    <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sun's Education</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <script type="text/javascript" src="js/demo.js"></script>
         <script type="text/javascript" src="js/swfobject.js"></script>
         <script type="text/javascript" src="js/sms_setup.js"></script>
- </head>
- <body>
-    <div style="width: 640px; height: 480px;">
-        <div id="flashContent">
-            <script type="text/javascript">
-                var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
-                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
-            </script>
-        </div>
-    </div>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header clearfix">
+			<img id="logo" src="image/logo.png" alt="logo">
+			<div id="nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</header>
 
-   </body>
+		<!-- Body -->
+		<div id="wrapper">
+			<section id="content">
+				<article>
+					<h1>About Us</h1>
+					<p>Don't have time to continue your education on campus? Sun's Education can help you out!</p>
+					<p>We have the best professors around the world. You can choose whatever course you like.</p>
+				</article>
+			</section>
+
+			<div id="player">
+				<h1>Video</h1>
+	         <!-- <img src="image/cover_2.png" alt="video player" width="960px"> -->
+	    	</div>
+
+	    	<div id="videoPlayer">
+	        	<div id="flashContent">
+		            <script type="text/javascript">
+		                var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
+		                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
+		            </script>
+	        	</div>
+    		</div>
+    		<div id="videoBar">
+					<div class="controlbar clearfix">
+						<div class="volume clearfix">
+							<div class="volIcon"></div>
+							<div class="volSlider"></div>
+						</div>
+
+						<div class="play"></div>
+						<div class="record"></div>
+						<div class="microphone"></div>
+						<div class="camera"></div>
+					</div>
+
+					<div class="seekbar clearfix">
+						<div class="duration">
+							<p>00:12:29</p>
+						</div>
+						<div class="timelineSeekbar"></div>
+						<div class="totalDuration">
+							<p>00:12:29</p>
+						</div>
+					</div>
+				</div>
+
+		     <div id="comments">
+		         <h2>Comments:</h2>
+		         <h4>User 1:</h4>
+		         <p>So useful.</p>
+		         <h4>User 2:</h4>
+		         <p>I like those videos.</p>
+		     </div>
+
+	     <div id="footer">
+	         <div id="copyright">
+	             <p>&copy; 2013 Sun's Education. All rights reserved.</p>
+	         </div>
+	     </div>
+     </div>
+	
+	</body>
 </html>

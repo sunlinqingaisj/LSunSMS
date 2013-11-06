@@ -1,0 +1,187 @@
+html{
+	background: url(../image/bg.png);
+}
+
+h1,h2,h4{
+	color: #ce1446;
+}
+
+.header {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+
+#logo{
+	width: 200px;
+	height: 150px;
+	float: left;
+}
+
+#nav{
+	float: right;
+	padding-right: 400px;
+	padding-top: 50px;
+	text-decoration: none; 
+
+}
+
+#nav ul{
+
+}
+
+#nav ul li{
+	list-style: none;
+	font-family: Helvetica;
+	font-size: 20px;
+	text-transform: uppercase;
+	float: left;
+	padding-left: 50px;
+}
+
+#nav ul li a{
+	text-decoration: none;
+	color: #ce1446;
+}
+
+#videoPlayer {
+	width: 640px;
+	padding: 5px;
+	background: white;
+	height: 480px;
+	border-bottom: 1px solid #ccc;
+}
+
+/*#videoBar img{
+	width: 30%;
+	height: 30%;
+}*/
+
+#videoBar{
+	width: 640px;
+	background: #fff;
+	padding: 10px 5px 5px 5px;
+	text-decoration: none; 
+}
+
+.seekbar {
+	width: 630px;
+	overflow: hidden;
+	background: #fff;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.duration {
+	width: 80px;
+	height: 30px;
+	line-height: 2px;
+	margin-right: 10px;
+	margin-left: 30px;
+	float: left;
+}
+
+.timelineSeekbar {
+	width: 380px;
+	background: url(../image/seekbar.jpg) no-repeat center;
+	height: 30px;
+	margin-right: 10px;
+	float: left;
+}
+
+.totalDuration {
+	width: 100px;
+	height: 30px;
+	line-height: 2px;
+	float: right;
+}
+
+.controlbar {
+	width: 100%;
+	height: 35px;
+	line-height: 35px;	
+}
+
+.volume {
+	width: 190px;
+	height: 35px;
+	margin-left: 10px;
+	float: left;
+	line-height: 35px;
+}
+
+.controlbar > .volume > .volIcon{
+	width: 21px;
+	height: 28px;
+	line-height: 28px;
+	float: left;
+	background: url(../image/volIcon.png) no-repeat;
+}
+
+.volSlider {
+	width: 164px;
+	height: 28px;
+	float: right;
+	margin-top: 2px;
+	background: url(../image/progressBar.png) no-repeat center;
+	display: block;
+}
+
+.play {
+	width: 30px;
+	float: left;
+	height: 33px;
+	margin-left: 100px; 
+	background: url(../image/playBtn.png) no-repeat;
+
+}
+
+.record {
+	width: 29px;
+	height: 29px;
+	margin-left: 20px;
+	margin-right: 10px;
+	float: right;
+	background: url(../image/recordBtn.png) no-repeat center;
+}
+
+.microphone {
+	width: 19px;
+	height: 30px;
+	float: right;
+	margin-left: 20px;
+	background: url(../image/microphoneBtn.png) no-repeat center;
+}
+
+.camera {
+	width: 28px;
+	float: right;
+	height: 27px;
+	background: url(../image/cameraBtn.png) no-repeat center;
+}
+
+#comments {
+	width: 480px;
+	height: 300px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+#content{
+	clear: both;
+}
+
+#footer{
+	width: 300px;
+	margin: 0 auto;
+}
+
+#footer p{
+	color: #ce1446;
+}
