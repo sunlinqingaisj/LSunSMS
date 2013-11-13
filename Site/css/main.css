@@ -131,14 +131,15 @@ h1,h2,h4{
 	display: block;
 }
 
-.play {
+.play, .pause{
 	width: 30px;
 	float: left;
 	height: 33px;
 	margin-left: 100px; 
-	background: url(../image/playBtn.png) no-repeat;
-
 }
+.play{background: url(../image/playBtn.png) no-repeat;}
+
+.pause {background: url(../image/pauseBtn.png) no-repeat;}
 
 .record {
 	width: 29px;
