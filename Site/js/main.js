@@ -28,11 +28,11 @@ var flashReady = function () {
 	}
 	function paused(){
 		$('.pause').click(function(){
-			$(this).unbind();
+			// $(this).unbind();
 			flash.playPause();
-			$(this).remove();
-			$('.volume').after('<div class="play"></div>');
-			played();
+			// $(this).remove();
+			// $('.volume').after('<div class="play"></div>');
+			// played();
 		});
 	}
 

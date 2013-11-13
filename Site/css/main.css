@@ -162,7 +162,14 @@ h1,h2,h4{
 	width: 28px;
 	float: right;
 	height: 27px;
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
 	background: url(../image/cameraBtn.png) no-repeat center;
+}
+
+select{
+
 }
 
 #comments {
