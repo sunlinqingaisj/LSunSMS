@@ -45,7 +45,8 @@ var flashReady = function () {
 			record=false;
 		}else{
 			flash.stopRecording();
-			record=true
+			record=true;
+			playRec='';
 		}
 	})
 }
@@ -59,7 +60,7 @@ var connected = function(success,error){
 
 	if(success){
 		if(playRec==="rec"){
-			flash.startRecording();
+			flash.startRecording('test',0,0);
 		}else{
 		flash.startPlaying('hobbit_vp6.flv');
 		};
