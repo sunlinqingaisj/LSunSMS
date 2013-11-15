@@ -127,8 +127,17 @@ h1,h2,h4{
 	height: 28px;
 	float: right;
 	margin-top: 2px;
+	position: relative;
 	background: url(../image/progressBar.png) no-repeat center;
 	display: block;
+}
+
+ .moveBtn{
+	position: absolute;
+	top: 28;
+	/*left: 0;*/
+	width: 17px;
+	background: url(../image/moveBtn.png) no-repeat center;
 }
 
 .play, .pause{
@@ -155,6 +164,7 @@ h1,h2,h4{
 	height: 30px;
 	float: right;
 	margin-left: 20px;
+	text-indent: 100%;
 	background: url(../image/microphoneBtn.png) no-repeat center;
 }
 
@@ -169,7 +179,7 @@ h1,h2,h4{
 }
 
 select{
-
+	border: none;
 }
 
 #comments {

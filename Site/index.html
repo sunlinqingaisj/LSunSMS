@@ -4,6 +4,7 @@
 		<title>Sun's Education</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src='https://cdn.firebase.com/v0/firebase.js'></script>
 	</head>
 	<body>
 		<!-- Header -->
@@ -44,7 +45,7 @@
 					<div class="controlbar clearfix">
 						<div class="volume clearfix">
 							<div class="volIcon"></div>
-							<div class="volSlider"></div>
+							<div class="volSlider"><img class='moveBtn' src="image/moveBtn.png"></div>
 						</div>
 
 						<div class="play"></div>
@@ -57,21 +58,18 @@
 
 					<div class="seekbar clearfix">
 						<div class="duration">
-							<p>00:12:29</p>
+							<p>00:12/00:00</p>
 						</div>
-						<div class="timelineSeekbar"></div>
-						<div class="totalDuration">
-							<p>00:12:29</p>
-						</div>
+						<div class="timelineSeekbar"><img class='moveBtn' src="image/moveBtn.png"></div>
 					</div>
 				</div>
 
 		     <div id="comments">
 		         <h2>Comments:</h2>
 		         <h4>User 1:</h4>
-		         <p>So useful.</p>
+		         <input type="text" id='nameInput' placeholder='name'>
 		         <h4>User 2:</h4>
-		         <p>I like those videos.</p>
+		          <input type="text" id='messageInput' placeholder='message'>
 		     </div>
 
 	     <div id="footer">
