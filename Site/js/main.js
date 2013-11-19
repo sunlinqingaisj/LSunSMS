@@ -114,7 +114,7 @@ $('.play').click(function(){
 	})
 
 	var playRec = '';
-	var myDataRef = new Firebase('https://qccqxxmm8og.firebaseio-demo.com/');
+	var myDataRef = new Firebase('https://sunseducation.firebaseio.com/');
 	$('#messageInput').keypress(function (e) {
 	        if (e.keyCode == 13) {
 	          var name = $('#nameInput').val();
@@ -124,9 +124,6 @@ $('.play').click(function(){
 	        }
 	      });
 		myDataRef.on('child_added', function(snapshot) {
-	  //We'll fill this in later.
-		});
-		myDataRef.on('child_added', function(snapshot) {
 	        var message = snapshot.val();
 	displayChatMessage(message.name, message.text);
 	      });
@@ -134,6 +131,41 @@ $('.play').click(function(){
 	        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
 	        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
 	      };
+
+	var chatRef = new Firebase('https://sunseducation.firebaseio.com/');
+	var auth = new FirebaseSimpleLogin(myDataRef, function(error, user) {
+	  if (error) {
+    // an error occurred while attempting login
+    	alert("Check your email address or password")
+  		} else if (user) {
+    // user authenticated with Firebase
+    	console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+  		} else {
+    // user is logged out
+  		}
+	});
+
+	$('#loginGit').on('click',function(e){
+		if($(this).html() == 'Login with Github'){
+			auth.login('github');
+			$(this).html('Logout'); 
+		}else{
+			auth.logout();
+			$(this).html('Login with Github');
+		}
+	});
+
+	$('#loginFacebook').on('click',function(e){
+		if($(this).html() == 'Login with Facebook'){
+			auth.login('facebook');
+			$(this).html('Logout') 
+		}else{
+			auth.logout();
+			$(this).html('Login with Facebook');
+		}
+	})
+
+	
 
 	var connected = function(success,error){
 

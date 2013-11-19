@@ -13,8 +13,8 @@ h1,h2,h4{
 
 #login{
 	width: 200px;
-	clear: both;
-	/*float: right;*/
+	overflow: hidden;
+	float: right;
 }
 
 #wrapper{
@@ -31,15 +31,16 @@ h1,h2,h4{
 }
 
 #nav{
-	float: right;
-	padding-right: 400px;
+	overflow: hidden;
+	width: 400px;
+	float: left;
 	padding-top: 50px;
 	text-decoration: none; 
 
 }
 
 #nav ul{
-
+	width: 300px;
 }
 
 #nav ul li{
