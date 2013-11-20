@@ -3,7 +3,7 @@ var flashReady = function () {
 }
 
 var videoDuration;// body...
-	var totalDruation;
+var totalDruation;
 
 	console.log('hello');
 
@@ -117,7 +117,7 @@ $('.play').click(function(){
 	var myDataRef = new Firebase('https://sunseducation.firebaseio.com/');
 	$('#messageInput').keypress(function (e) {
 	        if (e.keyCode == 13) {
-	          var name = $('#nameInput').val();
+	          var name = $('#nameInput').val(user.name);
 	          var text = $('#messageInput').val();
 	          myDataRef.push({name: name, text: text});
 	          $('#messageInput').val('');
@@ -139,7 +139,8 @@ $('.play').click(function(){
     	alert("Check your email address or password")
   		} else if (user) {
     // user authenticated with Firebase
-    	console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+    	console.log('User name: ' + user.name + ', Provider: ' + user.provider);
+    	$('#nameInput').val(user.name);
   		} else {
     // user is logged out
   		}
@@ -149,6 +150,7 @@ $('.play').click(function(){
 		if($(this).html() == 'Login with Github'){
 			auth.login('github');
 			$(this).html('Logout'); 
+			
 		}else{
 			auth.logout();
 			$(this).html('Login with Github');
@@ -158,7 +160,7 @@ $('.play').click(function(){
 	$('#loginFacebook').on('click',function(e){
 		if($(this).html() == 'Login with Facebook'){
 			auth.login('facebook');
-			$(this).html('Logout') 
+			$(this).html('Logout');
 		}else{
 			auth.logout();
 			$(this).html('Login with Facebook');
