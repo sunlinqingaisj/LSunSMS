@@ -3,7 +3,7 @@ var flashReady = function () {
 }
 
 var videoDuration;// body...
-	var totalDruation;
+var totalDruation;
 
 	console.log('hello');
 
@@ -31,12 +31,12 @@ $('.play').click(function(){
 	// paused();
 	if(!playing){
 		flash.playPause();
-		$('.play').css('background-image','url("http://localhost:8888/Site/image/pauseBtn.png")');
+		$('.play').css('background-image','url("http://localhost:8888/Site/image/playBtn.png")');
 		console.log('playing')
 		playing= true;
 	}else{
 		flash.playPause();
-		$('.play').css('background-image', 'url("http://localhost:8888/Site/image/playBtn.png")');
+		$('.play').css('background-image', 'url("http://localhost:8888/Site/image/pauseBtn.png")');
 		playing = false;
 	}
 });
@@ -114,26 +114,60 @@ $('.play').click(function(){
 	})
 
 	var playRec = '';
-	// var myDataRef = new Firebase('https://qccqxxmm8og.firebaseio-demo.com/');
-	// $('#messageInput').keypress(function (e) {
-	//         if (e.keyCode == 13) {
-	//           var name = $('#nameInput').val();
-	//           var text = $('#messageInput').val();
-	//           myDataRef.push('User ' + name + ' says ' + text);
-	//           $('#messageInput').val('');
-	//         }
-	//       });
-	// 	myDataRef.on('child_added', function(snapshot) {
-	//   //We'll fill this in later.
-	// 	});
-	// 	myDataRef.on('child_added', function(snapshot) {
-	//         var message = snapshot.val();
-	// displayChatMessage(message.name, message.text);
-	//       });
-	//       function displayChatMessage(name, text) {
-	//         $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-	//         $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-	//       };
+	var myDataRef = new Firebase('https://sunseducation.firebaseio.com/');
+	$('#messageInput').keypress(function (e) {
+	        if (e.keyCode == 13) {
+	          var name = $('#nameInput').val(user.name);
+	          var text = $('#messageInput').val();
+	          myDataRef.push({name: name, text: text});
+	          $('#messageInput').val('');
+	        }
+	      });
+		myDataRef.on('child_added', function(snapshot) {
+	        var message = snapshot.val();
+	displayChatMessage(message.name, message.text);
+	      });
+	      function displayChatMessage(name, text) {
+	        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+	        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+	      };
+
+	var chatRef = new Firebase('https://sunseducation.firebaseio.com/');
+	var auth = new FirebaseSimpleLogin(myDataRef, function(error, user) {
+	  if (error) {
+    // an error occurred while attempting login
+    	alert("Check your email address or password")
+  		} else if (user) {
+    // user authenticated with Firebase
+    	console.log('User name: ' + user.name + ', Provider: ' + user.provider);
+    	$('#nameInput').val(user.name);
+  		} else {
+    // user is logged out
+  		}
+	});
+
+	$('#loginGit').on('click',function(e){
+		if($(this).html() == 'Login with Github'){
+			auth.login('github');
+			$(this).html('Logout'); 
+			
+		}else{
+			auth.logout();
+			$(this).html('Login with Github');
+		}
+	});
+
+	$('#loginFacebook').on('click',function(e){
+		if($(this).html() == 'Login with Facebook'){
+			auth.login('facebook');
+			$(this).html('Logout');
+		}else{
+			auth.logout();
+			$(this).html('Login with Facebook');
+		}
+	})
+
+	
 
 	var connected = function(success,error){
 

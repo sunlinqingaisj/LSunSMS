@@ -11,27 +11,36 @@ h1,h2,h4{
 	margin: 0 auto;
 }
 
+#login{
+	width: 200px;
+	overflow: hidden;
+	float: right;
+}
+
 #wrapper{
+	/*background: #00ff00;*/
+	clear: both;
 	width: 960px;
 	margin: 0 auto;
 }
 
 #logo{
-	width: 200px;
-	height: 150px;
+	width: 20%;
+	height: 20%;
 	float: left;
 }
 
 #nav{
-	float: right;
-	padding-right: 400px;
+	overflow: hidden;
+	width: 400px;
+	float: left;
 	padding-top: 50px;
 	text-decoration: none; 
 
 }
 
 #nav ul{
-
+	width: 300px;
 }
 
 #nav ul li{
@@ -54,6 +63,7 @@ h1,h2,h4{
 	background: white;
 	height: 480px;
 	border-bottom: 1px solid #ccc;
+	/*float: left;*/
 }
 
 /*#videoBar img{
@@ -66,6 +76,7 @@ h1,h2,h4{
 	background: #fff;
 	padding: 10px 5px 5px 5px;
 	text-decoration: none; 
+	/*float: left;*/
 }
 
 .seekbar {
@@ -150,6 +161,10 @@ h1,h2,h4{
 
 .pause {background: url(../image/pauseBtn.png) no-repeat;}
 
+.moveBtn{
+	margin-top: 5px;
+}
+
 .record {
 	width: 29px;
 	height: 29px;
@@ -183,21 +198,39 @@ select{
 }
 
 #comments {
-	width: 480px;
-	height: 300px;
+	width: 250px;
+	height: 400px;
+	float: right;
 }
 
 .clearfix {
 	clear: both;
 }
 
+#first_column{
+	width: 640px;
+	float: left;
+}
+
+#second_column{
+	width: 200px;
+	float: right;
+}
+
 #content{
+	width: 640px;
 	clear: both;
+}
+
+#messageInput{
+	width: 300px;
+	height: 150px;
 }
 
 #footer{
 	width: 300px;
 	margin: 0 auto;
+	padding-top: 30px;
 }
 
 #footer p{
